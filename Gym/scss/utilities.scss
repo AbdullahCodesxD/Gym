@@ -1,0 +1,107 @@
+$font-a: 'Joti One', cursive;
+
+// COLORS
+$main: #e6190f;
+$main-light: #f2362c;
+$second: #2156c0;
+$dark: #121616;
+$body: #2b2b2b;
+// UTILITIES
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $body;
+  color: #ccc;
+  font-family: $font-a;
+  text-transform: capitalize;
+}
+p {
+  opacity: 0.8;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-a;
+  text-transform: capitalize;
+  color: #ccc;
+  opacity: 0.9;
+}
+// PADDING
+.py {
+  &-1 {
+    padding: 1rem;
+  }
+  &-2 {
+    padding: 2rem;
+  }
+}
+.pt {
+  &-1 {
+    padding: 1rem 0;
+  }
+  &-2 {
+    padding: 2rem 0;
+  }
+}
+// MARGIN
+.my {
+  &-1 {
+    margin: 1rem;
+  }
+  &-2 {
+    margin: 2rem;
+  }
+}
+.mt {
+  &-1 {
+    margin: 1rem 0;
+  }
+  &-2 {
+    margin: 2rem 0;
+  }
+}
+
+.text-align {
+  text-align: center;
+}
+
+.under__line {
+  width: 7rem;
+  height: 0.15rem;
+  background-color: $main;
+  margin: 1rem auto;
+  display: block;
+}
+
+.highlight__blue {
+  color: $second;
+}
+.highlight__red {
+  color: $main;
+}
+.btn {
+  background-color: transparent;
+  border: 2px solid $second;
+  border-radius: 5000rem;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #ccc;
+  &:hover {
+    background-color: $second;
+    border-color: transparent;
+    color: #fff;
+  }
+  a {
+    // padding: inherit;
+    color: inherit;
+    font-family: $font-a;
+    text-decoration: none;
+  }
+}

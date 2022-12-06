@@ -1,0 +1,18 @@
+@media (max-width: 375px) {
+  main {
+    padding: 0 1.75rem;
+    .container {
+      height: 100vh;
+      gap: 7rem;
+      h1 {
+        font-size: 44px;
+      }
+      h4 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}
