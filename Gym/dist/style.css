@@ -86,7 +86,7 @@ nav {
   position: sticky;
   top: 0;
   left: 0;
-  background: url(/dist/img/hero-mob.jpg) no-repeat center center/cover;
+  background: url(img/hero-mob.jpg) no-repeat center center/cover;
   filter: saturate(40%);
   z-index: 1; }
   .main--img:after {
