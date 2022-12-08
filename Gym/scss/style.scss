@@ -1,6 +1,41 @@
 @import 'utilities';
 nav {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  right: 0%;
+  // background-color: red;
+  z-index: 69420;
+  .container {
+    .hamburger {
+      position: relative;
+      height: 2.5rem;
+      width: 2.5rem;
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0rem 0.5rem;
+      background: rgba(33, 86, 192, 0.5);
+      .line {
+        margin: 0.15rem 0;
+        height: 0.15rem;
+        border-radius: 50rem;
+        width: 100%;
+        background-color: $main;
+      }
+      .line:nth-child(1) {
+        position: relative;
+        left: calc(65% - 100%);
+        width: calc(100% - 70%);
+      }
+      .line:nth-child(2) {
+        position: relative;
+        left: calc(80% - 100%);
+        width: calc(100% - 40%);
+      }
+    }
+  }
 }
 .main--img {
   margin: 0;
@@ -9,9 +44,35 @@ nav {
   position: sticky;
   top: 0;
   left: 0;
-  background: url(/dist/img/hero-mob.jpg) no-repeat center center/cover;
-  filter: saturate(40%);
+  overflow: hidden;
+  picture {
+    width: inherit;
+    height: inherit;
+    img,
+    source {
+      // tansform: scale(1.1);
+      height: 140vh;
+      width: inherit;
+
+      transform: scale(1.1);
+    }
+  }
+  // background: url(img/hero-mob.jpg) no-repeat center center/cover;
+  // background-position-x: 45%;
+  // background-size: cover;
+  filter: saturate(100%);
+  animation: hero 7s infinite alternate-reverse ease-in-out;
   z-index: 1;
+  @keyframes hero {
+    from {
+      // background-size: 140%;
+      filter: saturate(100%);
+    }
+    to {
+      // background-size: 135%;
+      filter: saturate(0%);
+    }
+  }
   &:after {
     position: absolute;
     top: 0;
@@ -20,6 +81,15 @@ nav {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.75);
+    animation: heroOver 4s infinite alternate-reverse ease-in-out;
+    @keyframes heroOver {
+      from {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+      to {
+        background-color: rgba(0, 0, 0, 0.75);
+      }
+    }
   }
 }
 
