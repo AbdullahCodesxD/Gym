@@ -1,79 +1,129 @@
+$font-a: 'Joti One', cursive;
+
+// COLORS
+$main: #e6190f;
+$main-light: #f2362c;
+$second: #2156c0;
+$dark: #121616;
+$body: #2b2b2b;
+// UTILITIES
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
-
+  box-sizing: border-box;
+}
 body {
-  background-color: #2b2b2b;
+  background-color: $body;
   color: #ccc;
-  font-family: "Joti One", cursive;
-  text-transform: capitalize; }
-
+  font-family: $font-a;
+  text-transform: capitalize;
+}
+.container {
+  max-width: 1400px;
+  display: block;
+  margin: auto;
+}
 p {
-  opacity: 0.8; }
-
+  opacity: 0.8;
+}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Joti One", cursive;
+  font-family: $font-a;
   text-transform: capitalize;
   color: #ccc;
-  opacity: 0.9; }
-
-.py-1 {
-  padding: 1rem; }
-.py-2 {
-  padding: 2rem; }
-
-.pt-1 {
-  padding: 1rem 0; }
-.pt-2 {
-  padding: 2rem 0; }
-
-.my-1 {
-  margin: 1rem; }
-.my-2 {
-  margin: 2rem; }
-
-.mt-1 {
-  margin: 1rem 0; }
-.mt-2 {
-  margin: 2rem 0; }
+  opacity: 0.9;
+}
+// PADDING
+.py {
+  &-1 {
+    padding: 1rem;
+  }
+  &-2 {
+    padding: 2rem;
+  }
+}
+.pt {
+  &-1 {
+    padding: 1rem 0;
+  }
+  &-2 {
+    padding: 2rem 0;
+  }
+}
+// MARGIN
+.my {
+  &-1 {
+    margin: 1rem;
+  }
+  &-2 {
+    margin: 2rem;
+  }
+}
+.mt {
+  &-1 {
+    margin: 1rem 0;
+  }
+  &-2 {
+    margin: 2rem 0;
+  }
+}
 
 .text-align {
-  text-align: center; }
+  text-align: center;
+}
 
 .under__line {
   width: 7rem;
   height: 0.15rem;
-  background-color: #e6190f;
+  background-color: $main;
   margin: 1rem auto;
-  display: block; }
+  display: block;
+}
 
 .highlight__blue {
-  color: #2156c0; }
-
+  color: $second;
+}
 .highlight__red {
-  color: #e6190f; }
-
+  color: $main;
+}
 .btn {
   background-color: transparent;
-  border: 2px solid #2156c0;
+  border: 2px solid $second;
   border-radius: 5000rem;
   padding: 0.75rem 2rem;
-  transition: all 0.3s ease;
   cursor: pointer;
-  color: #ccc; }
-  .btn:hover {
-    background-color: #2156c0;
-    border-color: transparent;
-    color: #fff; }
-  .btn a {
+  position: relative;
+  color: #ccc;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+  &:hover {
+    border-color: hsla(220, 71%, 44%, 0.729);
+    &:after {
+      background-image: linear-gradient(45deg, $second 10%, transparent);
+      top: 0%;
+      left: 0;
+      color: #fff;
+    }
+  }
+  &:after {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(45deg, $second 10%, transparent);
+    transition: all 0.3s ease;
+    z-index: -1;
+  }
+  a {
+    // padding: inherit;
     color: inherit;
-    font-family: "Joti One", cursive;
-    text-decoration: none; }
-
-/*# sourceMappingURL=utilities.css.map */
+    font-family: $font-a;
+    text-decoration: none;
+  }
+}
