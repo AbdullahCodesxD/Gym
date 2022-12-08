@@ -14,7 +14,7 @@
   <body>
     <nav>
       <!-- CONAINER -->
-      <div class="container mt-1">
+      <div class="container">
         <!-- HAMBURGER -->
         <div class="hamburger">
           <div class="line"></div>
@@ -24,7 +24,12 @@
       </div>
     </nav>
     <!-- HEADER -->
-    <div class="main--img"> </div>
+    <div class="main--img">
+      <picture>
+        <source media="(min-width:800px) " srcset="img/hero-pc.jpg" />
+        <img src="img/hero-mob.jpg" loading="lazy" alt="Main Img" />
+      </picture>
+    </div>
     <main class="header">
       <div class="container">
         <!-- HEADING -->
